@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "endnew",
+	"version": "${version}",
+	"name": "EndNew",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/endnew/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"ninja.trek.endnew.EndNew"
+		],
+		"client": [
+			"ninja.trek.endnew.EndNewClient"
+		],
+		"fabric-datagen": [
+			"ninja.trek.endnew.EndNewDataGenerator"
+		]
+	},
+	"mixins": [
+		"endnew.mixins.json",
+		{
+			"config": "endnew.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
